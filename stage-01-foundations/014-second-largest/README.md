@@ -1,4 +1,3 @@
-
 # Challenge 014 — Second Largest Number
 
 ## Difficulty
