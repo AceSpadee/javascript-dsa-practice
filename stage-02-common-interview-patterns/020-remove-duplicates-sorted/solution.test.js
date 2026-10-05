@@ -1,9 +1,24 @@
 import { describe, it, expect } from 'vitest';
+import removeDuplicates from './solution.js';
 
-
-describe('moveZeroes', () => {
-    it('return same array with 0 moved', () => {
-        expect(moveZeroes([0, 1, 0, 3, 12])).toEqual([1, 3, 12, 0, 0]);
+describe('removeDuplicates', () => {
+    it('return cleaned array', () => {
+        expect(removeDuplicates([1, 1, 2, 2, 3])).toEqual([1, 2, 3]);
     });
 
+    it('return single value for only duplicate numbers', () => {
+        expect(removeDuplicates([1, 1, 1])).toEqual([1]);
+    });
+
+    it('return cleaned arrays with negatives', () => {
+        expect(removeDuplicates([-3, -3, -1, 0, 0, 2])).toEqual([-3, -1, 0, 2]);
+    });
+
+    it('return same array for 1 number', () => {
+        expect(removeDuplicates([5])).toEqual([5]);
+    });
+
+    it('return empty array for empty numbers', () => {
+        expect(removeDuplicates([])).toEqual([]);
+    });
 });
