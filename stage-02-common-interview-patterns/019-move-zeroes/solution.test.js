@@ -22,4 +22,9 @@ describe('moveZeroes', () => {
         expect(moveZeroes([])).toEqual([]);
     });
 
+    it('returns the same array reference', () => {
+        const numbers = [0, 1, 0, 3, 12];
+        const result = moveZeroes(numbers);
+        expect(result).toBe(numbers);
+    });
 });

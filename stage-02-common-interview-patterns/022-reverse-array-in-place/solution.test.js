@@ -22,4 +22,9 @@ describe('reverseArray', () => {
         expect(reverseArray([])).toEqual([]);
     });
 
+    it('returns the same array provided', () => {
+        const numbers = [1, 2, 3, 4];
+        const result = reverseArray(numbers);
+        expect(result).toBe(numbers);
+    });
 });

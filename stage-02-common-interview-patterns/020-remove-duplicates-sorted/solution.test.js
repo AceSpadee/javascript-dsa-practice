@@ -21,4 +21,14 @@ describe('removeDuplicates', () => {
     it('return empty array for empty numbers', () => {
         expect(removeDuplicates([])).toEqual([]);
     });
+
+    it('return same array when no duplicates', () => {
+        expect(removeDuplicates([1, 2, 3])).toEqual([1, 2, 3]);
+    });
+
+    it('returns the same array provided', () => {
+        const numbers = [1, 1, 2, 2, 3];
+        const result = removeDuplicates(numbers);
+        expect(result).toBe(numbers);
+    });
 });

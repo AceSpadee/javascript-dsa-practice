@@ -22,4 +22,10 @@ describe('removeTarget', () => {
         expect(removeTarget([], 2)).toEqual([]);
     });
 
+    it('returns the same array provided', () => {
+        const numbers = [1, 2, 3, 4];
+        const target = 2
+        const result = removeTarget(numbers, target);
+        expect(result).toBe(numbers);
+    });
 });
